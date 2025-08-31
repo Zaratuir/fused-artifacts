@@ -6,16 +6,17 @@
 	"contact" : "",
 	"licenseName" : "Creative Commons Attribution-ShareAlike",
 	"licenseURL" : "http://creativecommons.org/licenses/by-sa/4.0/deed",
-	"version" : "1.1.0",
-	"downloadSize" : 0.01,
+	"version" : "1.1.2",
 	"changelog" :
 	{
+		"1.1.2"  : [ "Update for vcmi-1.7 format" ],
+		"1.1.1"  : [ "Fixed Angelic Alliance from HotA game balance" ],
 		"1.1.0"  : [ "Fixed artifacts bonuses" ],
 		"1.0.0"  : [ "Initial release" ]
 	},
 	"compatibility" :
 	{
-		"min" : "1.6.0"
+		"min" : "1.7.0"
 	},
 	"czech" : {
 		"name" : "Spojené artefakty",

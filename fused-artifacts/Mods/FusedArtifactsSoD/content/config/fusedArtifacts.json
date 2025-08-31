@@ -1,134 +1,153 @@
 {
 	"core:admiralsHat" : {
 		"fusedComponents" : true,
-        "bonuses" : [
+        "bonuses" : {
+			"seaMovement" :
 			{
 				"type" : "MOVEMENT",
 				"subtype" : "heroMovementSea",
 				"val" : 1500,
 				"valueType" : "ADDITIVE_VALUE"
 			},
+			"safeWhirpools" :
 			{
 				"type" : "WHIRLPOOL_PROTECTION",
 				"val" : 0,
 				"valueType" : "BASE_NUMBER"
 			},
+			"summonBoat" :
 			{
-				"subtype" : "spell.summonBoat",
+				"subtype" : "summonBoat",
 				"type" : "SPELL",
 				"val" : 3,
 				"valueType" : "INDEPENDENT_MAX"
 			},
+			"scuttleBoat" :
 			{
-				"subtype" : "spell.scuttleBoat",
+				"subtype" : "scuttleBoat",
 				"type" : "SPELL",
 				"val" : 3,
 				"valueType" : "INDEPENDENT_MAX"
 			},
+			"boarding" :
 			{
 				"type" : "FREE_SHIP_BOARDING",
 				"val" : 0,
 				"valueType" : "BASE_NUMBER"
 			}
-        ]
+        }
 	},
 	"core:angelicAlliance" : {
 		"fusedComponents" : true,
-		 "bonuses" : [
+		 "bonuses" : {
+			"alignmentMix" :
 			{
 				"type" : "NONEVIL_ALIGNMENT_MIX",
 				"val" : 0,
 				"valueType" : "BASE_NUMBER"
 			},
+			"prayer" :
 			{
-				"subtype" : "spell.prayer",
+				"subtype" : "prayer",
 				"type" : "OPENING_BATTLE_SPELL",
 				"val" : 10,
 				"valueType" : "BASE_NUMBER"
 			},
+			"attack" :
 			{
-				"subtype" : "primarySkill.attack",
+				"subtype" : "attack",
 				"type" : "PRIMARY_SKILL",
 				"val" : 21,
 				"valueType" : "BASE_NUMBER"
 			},
+			"defence" :
 			{
-				"subtype" : "primarySkill.defence",
+				"subtype" : "defence",
 				"type" : "PRIMARY_SKILL",
 				"val" : 21,
 				"valueType" : "BASE_NUMBER"
 			},
+			"spellpower" :
 			{
-				"subtype" : "primarySkill.spellpower",
+				"subtype" : "spellpower",
 				"type" : "PRIMARY_SKILL",
 				"val" : 21,
 				"valueType" : "BASE_NUMBER"
 			},
+			"knowledge" :
 			{
-				"subtype" : "primarySkill.knowledge",
+				"subtype" : "knowledge",
 				"type" : "PRIMARY_SKILL",
 				"val" : 21,
 				"valueType" : "BASE_NUMBER"
-			},
-			
-		]
+			}	
+		}
 	},
 	"core:armorOfTheDamned" : {
 		"fusedComponents" : true,
-		 "bonuses" : [
+		 "bonuses" : {
+			"slow" :
 			{
-				"subtype" : "spell.slow",
+				"subtype" : "slow",
 				"type" : "OPENING_BATTLE_SPELL",
 				"val" : 50,
 				"valueType" : "BASE_NUMBER"
 			},
+			"curse" :
 			{
-				"subtype" : "spell.curse",
+				"subtype" : "curse",
 				"type" : "OPENING_BATTLE_SPELL",
 				"val" : 50,
 				"valueType" : "BASE_NUMBER"
 			},
+			"weakness" : 
 			{
-				"subtype" : "spell.weakness",
+				"subtype" : "weakness",
 				"type" : "OPENING_BATTLE_SPELL",
 				"val" : 50,
 				"valueType" : "BASE_NUMBER"
 			},
+			"misfortune" :
 			{
-				"subtype" : "spell.misfortune",
+				"subtype" : "misfortune",
 				"type" : "OPENING_BATTLE_SPELL",
 				"val" : 50,
 				"valueType" : "BASE_NUMBER"
 			},
+			"attack" :
 			{
-				"subtype" : "primarySkill.attack",
+				"subtype" : "attack",
 				"type" : "PRIMARY_SKILL",
 				"val" : 3,
 				"valueType" : "BASE_NUMBER"
 			},
+			"defence" :
 			{
-				"subtype" : "primarySkill.defence",
+				"subtype" : "defence",
 				"type" : "PRIMARY_SKILL",
 				"val" : 3,
 				"valueType" : "BASE_NUMBER"
 			},
+			"knowledge" :
 			{
-				"subtype" : "primarySkill.knowledge",
+				"subtype" : "knowledge",
 				"type" : "PRIMARY_SKILL",
 				"val" : 2,
 				"valueType" : "BASE_NUMBER"
 			},
+			"spellpower" :
 			{
-				"subtype" : "primarySkill.spellpower",
+				"subtype" : "spellpower",
 				"type" : "PRIMARY_SKILL",
 				"val" : 2,
 				"valueType" : "BASE_NUMBER"
 			}			
-		]
+		 }
 	},
 	"core:bowOfTheSharpshooter" : {
 		"fusedComponents" : true,
-		 "bonuses" : [
+		 "bonuses" : {
+			"archery+5" :
 			{
 				"type" : "PERCENTAGE_DAMAGE_BOOST",
 				"subtype" : "damageTypeRanged",
@@ -137,17 +156,14 @@
 				"limiters" : [
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters" : [
-							"PERCENTAGE_DAMAGE_BOOST",
-							"damageTypeRanged",
-							{
-								"type" : "SECONDARY_SKILL",
-								"id" : "secondarySkill.archery"
-							}
-						]
+						"bonusType" : "PERCENTAGE_DAMAGE_BOOST",
+						"bonusSubtype" : "damageTypeRanged",
+						"bonusSourceType" : "SECONDARY_SKILL",
+						"bonusSourceID" : "archery"					
 					}
 				]
 			},
+			"archery+10" :
 			{
 				"type" : "PERCENTAGE_DAMAGE_BOOST",
 				"subtype" : "damageTypeRanged",
@@ -156,17 +172,14 @@
 				"limiters" : [
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters" : [
-							"PERCENTAGE_DAMAGE_BOOST",
-							"damageTypeRanged",
-							{
-								"type" : "SECONDARY_SKILL",
-								"id" : "secondarySkill.archery"
-							}
-						]
+						"bonusType" : "PERCENTAGE_DAMAGE_BOOST",
+						"bonusSubtype" : "damageTypeRanged",
+						"bonusSourceType" : "SECONDARY_SKILL",
+						"bonusSourceID" : "archery"					
 					}
 				]
 			},
+			"archery+15" : 
 			{
 				"type" : "PERCENTAGE_DAMAGE_BOOST",
 				"subtype" : "damageTypeRanged",
@@ -175,99 +188,108 @@
 				"limiters" : [
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters" : [
-							"PERCENTAGE_DAMAGE_BOOST",
-							"damageTypeRanged",
-							{
-								"type" : "SECONDARY_SKILL",
-								"id" : "secondarySkill.archery"
-							}
-						]
+						"bonusType" : "PERCENTAGE_DAMAGE_BOOST",
+						"bonusSubtype" : "damageTypeRanged",
+						"bonusSourceType" : "SECONDARY_SKILL",
+						"bonusSourceID" : "archery"					
 					}
 				]
 			},
+			"noDistancePenalty" :
 			{
 				"limiters" : ["SHOOTER_ONLY"],
 				"type" : "NO_DISTANCE_PENALTY",
 				"val" : 0,
 				"valueType" : "ADDITIVE_VALUE"
 			},
+			"noWallPenalty" :
 			{
 				"limiters" : ["SHOOTER_ONLY"],
 				"type" : "NO_WALL_PENALTY",
 				"val" : 0,
 				"valueType" : "ADDITIVE_VALUE"
 			},
+			"freeShoting" :
 			{
 				"limiters" : ["SHOOTER_ONLY"],
 				"type" : "FREE_SHOOTING",
 				"val" : 0,
 				"valueType" : "ADDITIVE_VALUE"
 			}
-		]
+		 }
 	},
 	"core:cloakOfTheUndeadKing" : {
 		"fusedComponents" : true,
-		 "bonuses" : [
+		 "bonuses" : {
+			"raisePercentage" :
 			{
 				"type" : "UNDEAD_RAISE_PERCENTAGE",
 				"val" : 30,
 				"valueType" : "ADDITIVE_VALUE"
 			},
+			"raisedSkeleton" :
 			{
 				"type" : "IMPROVED_NECROMANCY",
-				"subtype" : "creature.skeleton",
+				"subtype" : "skeleton",
 				"addInfo" : 0
 			},
+			"raisedWalkingDead" :
 			{
 				"type" : "IMPROVED_NECROMANCY",
-				"subtype" : "creature.walkingDead",
+				"subtype" : "walkingDead",
 				"addInfo" : 1
 			},
+			"raisedWight" :
 			{
 				"type" : "IMPROVED_NECROMANCY",
-				"subtype" : "creature.wight",
+				"subtype" : "wight",
 				"addInfo" : 2
 			},
+			"raisedLich" :
 			{
 				"type" : "IMPROVED_NECROMANCY",
-				"subtype" : "creature.lich",
+				"subtype" : "lich",
 				"addInfo" : 3
 			}
-		]
+		 }
 	},
 	"core:cornucopia" : {
 		"fusedComponents" : true,
-		 "bonuses" : [
+		 "bonuses" : {
+			"crystal" :
 			{
-				"subtype" : "resource.crystal",
+				"subtype" : "crystal",
 				"type" : "GENERATE_RESOURCE",
 				"val" : 4,
 				"valueType" : "BASE_NUMBER"
 			},
+			"gems" :
 			{
-				"subtype" : "resource.gems",
+				"subtype" : "gems",
 				"type" : "GENERATE_RESOURCE",
 				"val" : 4,
 				"valueType" : "BASE_NUMBER"
 			},
+			"mercury" :
 			{
-				"subtype" : "resource.mercury",
+				"subtype" : "mercury",
 				"type" : "GENERATE_RESOURCE",
 				"val" : 4,
 				"valueType" : "BASE_NUMBER"
 			},
+			"sulfur" :
 			{
-				"subtype" : "resource.sulfur",
+				"subtype" : "sulfur",
 				"type" : "GENERATE_RESOURCE",
 				"val" : 4,
 				"valueType" : "BASE_NUMBER"
 			}
-		]
+		 }
 	},
 	"core:elixirOfLife" : {
 		"fusedComponents" : true,
-		 "bonuses" : [
+		 "bonuses" : {
+			"stackHealth" :
 			{
 				"type" : "STACK_HEALTH",
 				"val" : 25,
@@ -277,22 +299,23 @@
 					"IS_UNDEAD",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters" : [ "NON_LIVING" ]
+						"bonusType" :  "NON_LIVING" 
 					},
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters" : [ "MECHANICAL" ]
+						"bonusType" :  "MECHANICAL" 
 					},
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters" : [ "GARGOYLE" ]
+						"bonusType" :  "GARGOYLE" 
 					},
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters" : [ "SIEGE_WEAPON" ]
+						"bonusType" :  "SIEGE_WEAPON" 
 					}
 				]
 			},
+			"hpRegeneration" :
 			{
 				"type" : "HP_REGENERATION",
 				"val" : 50,
@@ -302,162 +325,183 @@
 					"IS_UNDEAD",
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters" : [ "NON_LIVING" ]
+						"bonusType" :  "NON_LIVING" 
 					},
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters" : [ "MECHANICAL" ]
+						"bonusType" :  "MECHANICAL" 
 					},
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters" : [ "GARGOYLE" ]
+						"bonusType" :  "GARGOYLE" 
 					}
 				]
 			},
+			"+4HP" :
 			{
 				"type" : "STACK_HEALTH",
 				"val" : 4,
 				"valueType" : "ADDITIVE_VALUE"
 			}
-		]
+		 }
 	},
 	"core:powerOfTheDragonFather" : {
 		"fusedComponents" : true,
-		 "bonuses" : [
+		 "bonuses" : {
+			"lvl4spellsImmunity" :
 			{
 				"type" : "LEVEL_SPELL_IMMUNITY",
 				"val" : 4,
 				"valueType" : "INDEPENDENT_MAX"
 			},
+			"attack" :
 			{
-				"subtype" : "primarySkill.attack",
+				"subtype" : "attack",
 				"type" : "PRIMARY_SKILL",
 				"val" : 16,
 				"valueType" : "BASE_NUMBER"
 			},
+			"defence" :
 			{
-				"subtype" : "primarySkill.defence",
+				"subtype" : "defence",
 				"type" : "PRIMARY_SKILL",
 				"val" : 16,
 				"valueType" : "BASE_NUMBER"
 			},
+			"spellPower" :
 			{
-				"subtype" : "primarySkill.spellpower",
+				"subtype" : "spellpower",
 				"type" : "PRIMARY_SKILL",
 				"val" : 16,
 				"valueType" : "BASE_NUMBER"
 			},
+			"knowledge" :
 			{
-				"subtype" : "primarySkill.knowledge",
+				"subtype" : "knowledge",
 				"type" : "PRIMARY_SKILL",
 				"val" : 16,
 				"valueType" : "BASE_NUMBER"
 			},
+			"morale" :
 			{
 				"type" : "MORALE",
 				"val" : 1,
 				"valueType" : "BASE_NUMBER"
 			},
+			"luck" :
 			{
 				"type" : "LUCK",
 				"val" : 1,
 				"valueType" : "BASE_NUMBER"
 			}
-		]
+		}
 	},
 	"core:ringOfTheMagi" : {
 		"fusedComponents" : true,
-		 "bonuses" : [
+		 "bonuses" : {
+			"spellDuration" :
 			{
 				"type" : "SPELL_DURATION",
 				"val" : 56,
 				"valueType" : "BASE_NUMBER"
 			}
-		]
+		 }
 	},
 	"core:statueOfLegion" : {
 		"fusedComponents" : true,
-		 "bonuses" : [
+		 "bonuses" : {
+			"+50%Growth" :
 			{
 				"type" : "CREATURE_GROWTH_PERCENT",
 				"val" : 50,
-				"propagator": "PLAYER_PROPAGATOR"
+				"propagator": "PLAYER"
 			},
+			"lvl2Growth" :
 			{
 				"type" : "CREATURE_GROWTH",
 				"subtype" : "creatureLevel2",
 				"val" : 5,
-				"propagator": "VISITED_TOWN_AND_VISITOR"
+				"propagator": "TOWN_AND_VISITOR"
 			},
+			"lvl3Growth" : 
 			{
 				"type" : "CREATURE_GROWTH",
 				"subtype" : "creatureLevel3",
 				"val" : 4,
-				"propagator": "VISITED_TOWN_AND_VISITOR"
+				"propagator": "TOWN_AND_VISITOR"
 			},
+			"lvl4Growth" :
 			{
 				"type" : "CREATURE_GROWTH",
 				"subtype" : "creatureLevel4",
 				"val" : 3,
-				"propagator": "VISITED_TOWN_AND_VISITOR"
+				"propagator": "TOWN_AND_VISITOR"
 			},
+			"lvl5Growth" :
 			{
 				"type" : "CREATURE_GROWTH",
 				"subtype" : "creatureLevel5",
 				"val" : 2,
-				"propagator": "VISITED_TOWN_AND_VISITOR"
+				"propagator": "TOWN_AND_VISITOR"
 			},
+			"lvl6Growth" :
 			{
 				"type" : "CREATURE_GROWTH",
 				"subtype" : "creatureLevel6",
 				"val" : 1,
-				"propagator": "VISITED_TOWN_AND_VISITOR"
+				"propagator": "TOWN_AND_VISITOR"
 			}
-		]
+		 }
 	},
 	"core:titansThunder" : {
 		"fusedComponents" : true,
-		 "bonuses" : [
+		 "bonuses" : {
+			"spell" :
 			{
-				"subtype" : "spell.titanBolt",
+				"subtype" : "titanBolt",
 				"type" : "SPELL",
 				"val" : 3,
 				"valueType" : "BASE_NUMBER"
 			},
+			"attack" :
 			{
-				"subtype" : "primarySkill.attack",
+				"subtype" : "attack",
 				"type" : "PRIMARY_SKILL",
 				"val" : 9,
 				"valueType" : "BASE_NUMBER"
 			},
+			"defence" :
 			{
-				"subtype" : "primarySkill.defence",
+				"subtype" : "defence",
 				"type" : "PRIMARY_SKILL",
 				"val" : 9,
 				"valueType" : "BASE_NUMBER"
 			},
+			"spellPower" :
 			{
-				"subtype" : "primarySkill.spellpower",
+				"subtype" : "spellpower",
 				"type" : "PRIMARY_SKILL",
 				"val" : 8,
 				"valueType" : "BASE_NUMBER"
 			},
+			"knowledge" :
 			{
-				"subtype" : "primarySkill.knowledge",
+				"subtype" : "knowledge",
 				"type" : "PRIMARY_SKILL",
 				"val" : 8,
 				"valueType" : "BASE_NUMBER"
 			}
-		]
+		 }
 	},
 	"core:wizardsWell" : {
 		"fusedComponents" : true,
-		"bonuses" : [
+		"bonuses" : {
+			"mana" :
 			{
-				"type" : "FULL_MANA_REGENERATION",
-				"val" : 0,
+				"type" : "MANA_PERCENTAGE_REGENERATION",
+				"val" : 100,
 				"valueType" : "BASE_NUMBER"
 			}
-		]
+		}
 	}
 }
